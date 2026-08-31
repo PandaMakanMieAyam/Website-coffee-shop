@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cinematic Coffee — Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cinema">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="logo-dot"></span>
+        Cinematic Coffee
+      </a>
+      <nav class="nav" id="nav2">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle2" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="menu-hero">
+      <h1>Menu Kami</h1>
+      <p>Pilih berdasarkan kategori — Coffee atau Non-Coffee. Klik pada item untuk melihat detail.</p>
+      <div class="filters">
+        <button class="filter active" data-filter="all">Semua</button>
+        <button class="filter" data-filter="coffee">Coffee</button>
+        <button class="filter" data-filter="non">Non-Coffee</button>
+      </div>
+    </section>
+
+    <section class="menu-grid" id="menuGrid">
+      <!-- Menu items (sample) -->
+      <article class="menu-item" data-type="coffee" data-name="Espresso" data-price="18000" data-desc="Shot kopi pekat — dasar dari banyak minuman.">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop&s=2a6f8fb3f7e1a6f4d6c2a0b8f6e8f9d1" alt="Espresso">
+        <div class="info">
+          <h4>Espresso</h4>
+          <div class="price">Rp 18.000</div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-type="coffee" data-name="Cappuccino" data-price="28000" data-desc="Campuran espresso, susu panas, dan busa lembut.">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop&s=8e77a07ef1f0ce1b9c0d6b3c2f2a8e66" alt="Cappuccino">
+        <div class="info">
+          <h4>Cappuccino</h4>
+          <div class="price">Rp 28.000</div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-type="coffee" data-name="Latte" data-price="30000" data-desc="Espresso dengan susu panas — lembut dan creamy.">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop&s=0c8a1d9b1a2c6dbf3fcd5b6f1b3b9d4f" alt="Latte">
+        <div class="info">
+          <h4>Latte</h4>
+          <div class="price">Rp 30.000</div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-type="coffee" data-name="Cold Brew" data-price="35000" data-desc="Kopi dingin hasil ekstraksi lambat, rasa halus.">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop&s=ae7d5f8d3b1ef2f4e5b6a4f1c2d1e3b9" alt="Cold Brew">
+        <div class="info">
+          <h4>Cold Brew</h4>
+          <div class="price">Rp 35.000</div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-type="non" data-name="Matcha Latte" data-price="30000" data-desc="Teh hijau bubuk pilihan, susu panas.">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1517686469429-8a7d30f8f2b4?q=80&w=800&auto=format&fit=crop&s=7a9e7eee8c6d5f4f6b4a7d2c1f9a8b3c" alt="Matcha Latte">
+        <div class="info">
+          <h4>Matcha Latte</h4>
+          <div class="price">Rp 30.000</div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-type="non" data-name="Hot Chocolate" data-price="25000" data-desc="Cokelat panas kental, nikmat untuk relaksasi.">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop&s=5b1a9c2d3f7c4d8e2b9f6c7a1b3a9c5f" alt="Hot Chocolate">
+        <div class="info">
+          <h4>Hot Chocolate</h4>
+          <div class="price">Rp 25.000</div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-type="non" data-name="Croissant" data-price="20000" data-desc="Pastry mentega segar, renyah dan lembut.">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=800&auto=format&fit=crop&s=6f3a1c4b2f7d5a8c9e1b2a3c4d5e6f7a" alt="Croissant">
+        <div class="info">
+          <h4>Croissant</h4>
+          <div class="price">Rp 20.000</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div id="itemModal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <img id="modalImg" alt="">
+      <div class="modal-info">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <div class="modal-price" id="modalPrice"></div>
+        <div class="modal-actions">
+          <button class="btn">Tambahkan ke Keranjang</button>
+          <button class="btn btn-ghost" id="modalBack">Kembali</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year2"></span> Cinematic Coffee</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
