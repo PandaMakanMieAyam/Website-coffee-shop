@@ -106,4 +106,34 @@ document.addEventListener('DOMContentLoaded', () => {
       bg.style.transform = 'scale(1.06)';
     });
   }
+
+  // === Enhance menu items: keyboard, hover class, aria ===
+  (function enhanceMenuItems() {
+    const items = document.querySelectorAll('.menu-item');
+
+    if (!items || items.length === 0) return;
+
+    items.forEach(el => {
+      // Make focusable + accessible if HTML hasn't been changed
+      if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('role')) el.setAttribute('role', 'button');
+      el.setAttribute('aria-label', el.dataset.name || el.querySelector('h4')?.textContent || 'Menu item');
+
+      // mouse hover class for more advanced CSS animation
+      el.addEventListener('mouseenter', () => el.classList.add('is-hover'));
+      el.addEventListener('mouseleave', () => el.classList.remove('is-hover'));
+
+      // keyboard: open on Enter or Space
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          el.click(); // reuse click handler that opens modal
+        }
+      });
+
+      // small visual feedback on focus
+      el.addEventListener('focus', () => el.classList.add('is-hover'));
+      el.addEventListener('blur', () => el.classList.remove('is-hover'));
+    });
+  })();
 });
