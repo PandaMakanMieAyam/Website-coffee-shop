@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cinematic Coffee — Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="cinema">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="logo-dot"></span>
+        Cinematic Coffee
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2000&auto=format&fit=crop&s=0c8a1d9b1a2c6dbf3fcd5b6f1b3b9d4f');"></div>
+      <div class="letterbox top"></div>
+      <div class="letterbox bottom"></div>
+
+      <div class="hero-content container">
+        <h1 class="hero-title">Selamat Datang di Cinematic Coffee</h1>
+        <p class="hero-sub">Rasakan kopi yang disajikan dengan suasana layaknya layar lebar — aroma, rasa, dan momen.</p>
+        <div class="hero-actions">
+          <a class="btn" href="menu.html">Lihat Menu</a>
+          <a class="btn btn-ghost" href="about.html">Tentang Kami</a>
+        </div>
+      </div>
+
+      <div class="grain"></div>
+      <div class="vignette"></div>
+    </section>
+
+    <section class="intro container">
+      <div class="split">
+        <div>
+          <h2>Pengalaman Kopi yang Sinematik</h2>
+          <p>Kami menyajikan kopi berkualitas dengan pencahayaan hangat, musik latar pilihan, dan atmosfer nyaman — perfect for sips and stories.</p>
+          <ul class="features">
+            <li>Single origin & signature blends</li>
+            <li>Barista berpengalaman</li>
+            <li>Menu non-coffee & pastry segar</li>
+          </ul>
+        </div>
+        <div class="intro-video">
+          <div class="fake-screen" role="img" aria-label="atmosfer kedai kopi">
+            <div class="play">▶</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlight container">
+      <h3>Menu Favorit</h3>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop&s=2a6f8fb3f7e1a6f4d6c2a0b8f6e8f9d1" alt="Espresso">
+          <div class="card-body">
+            <h4>Espresso</h4>
+            <p>Intens dan pekat, disajikan sempurna.</p>
+            <div class="price">Rp 18.000</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop&s=8e77a07ef1f0ce1b9c0d6b3c2f2a8e66" alt="Cappuccino">
+          <div class="card-body">
+            <h4>Cappuccino</h4>
+            <p>Busa lembut dengan cita rasa seimbang.</p>
+            <div class="price">Rp 28.000</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop&s=ae7d5f8d3b1ef2f4e5b6a4f1c2d1e3b9" alt="Cold Brew">
+          <div class="card-body">
+            <h4>Cold Brew</h4>
+            <p>Kopi dingin, ekstraksi lambat untuk rasa halus.</p>
+            <div class="price">Rp 35.000</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta container">
+      <h4>Datang & Rasakan Sendiri</h4>
+      <p>Ajak teman, duduk, dan nikmati sesi kopi sinema.</p>
+      <a href="about.html" class="btn">Lokasi & Kontak</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Cinematic Coffee — Semua hak dilindungi.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
